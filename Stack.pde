@@ -1,18 +1,18 @@
 class Stack
 {
   //Atributte
-  
   private int[] array;
+  private int[] tarray; 
   
-  //Methoden
-  
+  //Konstruktor
   Stack(){
     array = new int[0];
   }
   
+  //Methoden
   void push(int inhalt)
   {
-    int tarray[] = new int[array.length+1];
+    tarray = new int[array.length+1];
     for(int i = 0; i < array.length; i++){
       tarray[i] = array[i];
     }
@@ -31,7 +31,7 @@ class Stack
   int pop()
   {  
     int inhalt = array[array.length-1];
-    int tarray[] = new int[array.length-1];
+    tarray = new int[array.length-1];
     for(int i = 0; i < array.length-1; i++){
       tarray[i] = array[i];
     }
@@ -50,7 +50,6 @@ class Stack
   }
   
   //Optional
-  
   int anzeige(int stelle)
   {
     return(array[stelle]);
